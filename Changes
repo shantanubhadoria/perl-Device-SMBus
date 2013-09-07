@@ -4,5 +4,8 @@ Revision history for Perl extension Device::SMBus.
 	- original version; created by h2xs 1.23 with options
 		-xA -b 5.10.0 -li2c-dev -n Device::SMBus linux/i2c-dev.h
 
+<<<<<<< HEAD
 0.02 Sat Sun   8 3:15:11 2013
   - Added Basic Functions to SMBus Interface
+=======
+>>>>>>> 840c7e4b7087083b7f9a951c2cee4d3e498deb3d

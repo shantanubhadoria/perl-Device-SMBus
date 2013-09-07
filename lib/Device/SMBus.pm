@@ -61,41 +61,57 @@ sub _build_I2CBusFileHandle {
     my $fh = IO::File->new( $self->I2CBusDevicePath, O_RDWR );
     if( !$fh ){
         croak "Unable to open I2C Device File at $self->I2CBusDevicePath";
+<<<<<<< HEAD
         return -1;
+=======
+        return undef;
+>>>>>>> 840c7e4b7087083b7f9a951c2cee4d3e498deb3d
     }
     $self->I2CBusFilenumber($fh->fileno());
     $fh->ioctl(I2C_SLAVE,$self->I2CDeviceAddress);
     return $fh;
 }
 
+<<<<<<< HEAD
 =method readByteData
 
 $self->readByteData($register_address)
 
 =cut
 
+=======
+>>>>>>> 840c7e4b7087083b7f9a951c2cee4d3e498deb3d
 sub readByteData {
     my ($self,$register_address) = @_;
     my $retval = Device::SMBus::_readByteData($self->I2CBusFilenumber,$register_address);
 }
 
+<<<<<<< HEAD
 =method writeByteData
 
 $self->writeByteData($register_address,$value)
 
 =cut
 
+=======
+>>>>>>> 840c7e4b7087083b7f9a951c2cee4d3e498deb3d
 sub writeByteData {
     my ($self,$register_address,$value) = @_;
     my $retval = Device::SMBus::_readByteData($self->I2CBusFilenumber,$register_address,$value);
 }
 
+<<<<<<< HEAD
+=======
+# Preloaded methods go here.
+
+>>>>>>> 840c7e4b7087083b7f9a951c2cee4d3e498deb3d
 sub DEMOLISH {
     my ($self) = @_;
     $self->I2CBusFileHandle->close();
 }
 
 1;
+<<<<<<< HEAD
 
 __END__
 
@@ -125,5 +141,56 @@ This is a perl interface to smbus interface using libi2c-dev library.
 * [Fcntl]
 
 =end wikidoc
+=======
+__END__
+# Below is stub documentation for your module. You'd better edit it!
+
+=head1 NAME
+
+Device::SMBus - Perl extension for blah blah blah
+
+=head1 SYNOPSIS
+
+  use Device::SMBus;
+  blah blah blah
+
+=head1 DESCRIPTION
+
+Stub documentation for Device::SMBus, created by h2xs. It looks like the
+author of the extension was negligent enough to leave the stub
+unedited.
+
+Blah blah blah.
+
+=head2 EXPORT
+
+None by default.
+
+
+
+=head1 SEE ALSO
+
+Mention other useful documentation such as the documentation of
+related modules or operating system documentation (such as man pages
+in UNIX), or any relevant external documentation such as RFCs or
+standards.
+
+If you have a mailing list set up for your module, mention it here.
+
+If you have a web site set up for your module, mention it here.
+
+=head1 AUTHOR
+
+Shantanu Bhadoria, E<lt>shantanu@E<gt>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2013 by Shantanu Bhadoria
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.14.2 or,
+at your option, any later version of Perl 5 you may have available.
+
+>>>>>>> 840c7e4b7087083b7f9a951c2cee4d3e498deb3d
 
 =cut
