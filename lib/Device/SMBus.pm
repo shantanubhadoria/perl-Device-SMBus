@@ -10,7 +10,7 @@ package Device::SMBus;
 use 5.010000;
 
 # Dependencies
-use Mo;
+use Moo;
 use Carp;
 
 use IO::File;
@@ -36,7 +36,8 @@ has I2CBusDevicePath   => (
 
 has I2CBusFileHandle => (
     is         => 'ro',
-    lazy_build => 1,
+    lazy => 1,
+    builder => '_build_I2CBusFileHandle',
 );
 
 =attr I2CDeviceAddress
@@ -54,6 +55,8 @@ has I2CDeviceAddress => (
 
 has I2CBusFilenumber => (
     is => 'ro',
+    lazy => 1,
+    builder => '_build_I2CBusFilenumber',
 );
 
 sub _build_I2CBusFileHandle {
@@ -63,9 +66,14 @@ sub _build_I2CBusFileHandle {
         croak "Unable to open I2C Device File at $self->I2CBusDevicePath";
         return -1;
     }
-    $self->I2CBusFilenumber($fh->fileno());
     $fh->ioctl(I2C_SLAVE,$self->I2CDeviceAddress);
     return $fh;
+}
+
+# Implicitly Call the lazy builder for the file handle by using it and get the fileno
+sub _build_I2CBusFilenumber {
+    my ($self) = @_;
+    $self->I2CBusFileHandle->fileno();
 }
 
 =method readByteData
@@ -87,8 +95,10 @@ $self->writeByteData($register_address,$value)
 
 sub writeByteData {
     my ($self,$register_address,$value) = @_;
-    my $retval = Device::SMBus::_readByteData($self->I2CBusFilenumber,$register_address,$value);
+    my $retval = Device::SMBus::_writeByteData($self->I2CBusFilenumber,$register_address,$value);
 }
+
+# Preloaded methods go here.
 
 sub DEMOLISH {
     my ($self) = @_;
