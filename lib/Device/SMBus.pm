@@ -90,6 +90,8 @@ sub writeByteData {
     my $retval = Device::SMBus::_readByteData($self->I2CBusFilenumber,$register_address,$value);
 }
 
+# Preloaded methods go here.
+
 sub DEMOLISH {
     my ($self) = @_;
     $self->I2CBusFileHandle->close();
