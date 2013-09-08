@@ -76,6 +76,39 @@ sub _build_I2CBusFilenumber {
     $self->I2CBusFileHandle->fileno();
 }
 
+=method writeQuick
+
+$self->writeQuick($value)
+
+=cut
+
+sub writeQuick {
+    my ($self,$value) = @_;
+    my $retval = Device::SMBus::_writeQuick($self->I2CBusFilenumber,$value);
+}
+
+=method readByte
+
+$self->readByte()
+
+=cut
+
+sub readByte {
+    my ($self) = @_;
+    my $retval = Device::SMBus::_readByte($self->I2CBusFilenumber);
+}
+
+=method writeByte
+
+$self->writeByte()
+
+=cut
+
+sub writeByte {
+    my ($self, $value) = @_;
+    my $retval = Device::SMBus::_writeByte($self->I2CBusFilenumber,$value);
+}
+
 =method readByteData
 
 $self->readByteData($register_address)
@@ -96,6 +129,39 @@ $self->writeByteData($register_address,$value)
 sub writeByteData {
     my ($self,$register_address,$value) = @_;
     my $retval = Device::SMBus::_writeByteData($self->I2CBusFilenumber,$register_address,$value);
+}
+
+=method readWordData
+
+$self->readWordData($register_address)
+
+=cut
+
+sub readWordData {
+    my ($self,$register_address) = @_;
+    my $retval = Device::SMBus::_readWordData($self->I2CBusFilenumber,$register_address);
+}
+
+=method writeWordData
+
+$self->writeWordData($register_address,$value)
+
+=cut
+
+sub writeWordData {
+    my ($self,$register_address,$value) = @_;
+    my $retval = Device::SMBus::_writeWordData($self->I2CBusFilenumber,$register_address,$value);
+}
+
+=method processCall
+
+$self->processCall($register_address,$value)
+
+=cut
+
+sub processCall {
+    my ($self,$register_address,$value) = @_;
+    my $retval = Device::SMBus::_processCall($self->I2CBusFilenumber,$register_address,$value);
 }
 
 # Preloaded methods go here.

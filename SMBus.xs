@@ -105,6 +105,35 @@ int SMBus__writeBlockData(file,command,value)
   OUTPUT:
     RETVAL
 
+int SMBus__blockProcessCall(file, command, value)
+    int file
+    int command
+    SV * value
+  INIT:
+    STRLEN len;
+    char *buf = SvPV(value, len);
+  CODE:
+    RETVAL = i2c_smbus_block_process_call(file, command, len, buf);
+  OUTPUT:
+    RETVAL
+
+int SMBus__readI2CBlockData(file, command, output)
+    int file
+    int command
+    SV * output 
+  INIT:
+    STRLEN len;
+    char *buf = SvPV(output, len);
+    int ret;
+  CODE:
+    ret = i2c_smbus_read_i2c_block_data(file, command, len, buf);
+    if (ret == -1)
+      RETVAL = ret;
+    sv_setpvn(output, buf, ret);
+    RETVAL = ret;
+  OUTPUT:
+    RETVAL
+
 int SMBus__writeI2CBlockData(file, command, value)
     int file
     int command
