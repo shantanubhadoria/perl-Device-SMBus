@@ -35,8 +35,8 @@ has I2CBusDevicePath   => (
 );
 
 has I2CBusFileHandle => (
-    is         => 'ro',
-    lazy => 1,
+    is      => 'ro',
+    lazy    => 1,
     builder => '_build_I2CBusFileHandle',
 );
 
@@ -54,8 +54,8 @@ has I2CDeviceAddress => (
 );
 
 has I2CBusFilenumber => (
-    is => 'ro',
-    lazy => 1,
+    is      => 'ro',
+    lazy    => 1,
     builder => '_build_I2CBusFilenumber',
 );
 
