@@ -126,11 +126,11 @@ This is a perl interface to smbus interface using libi2c-dev library.
 
 = USAGE
 
-* This module provides a simplified object oriented interface to the libi2c-dev library for accessing electronic peripherals connected on the I2C bus. It uses Mo, a scaled down version of Moose without any data checks to improve speed.
+* This module provides a simplified object oriented interface to the libi2c-dev library for accessing electronic peripherals connected on the I2C bus. It uses Moo, a scaled down version of Moose without any data checks to improve speed.
 
 = see ALSO
 
-* [Mo]
+* [Moo]
 * [IO::File]
 * [Fcntl]
 
