@@ -12,3 +12,4 @@ Revision history for Perl extension Device::SMBus.
 
 0.04 
   - Fixed a bug in writeByteData 
+  - Fixed issues due to use of Mo(no lazy and build). Switched to Moo. 
