@@ -10,7 +10,7 @@ package Device::SMBus;
 use 5.010000;
 
 # Dependencies
-use Moo;
+use Moose;
 use Carp;
 
 use IO::File;
@@ -192,11 +192,11 @@ This is a perl interface to smbus interface using libi2c-dev library.
 
 = USAGE
 
-* This module provides a simplified object oriented interface to the libi2c-dev library for accessing electronic peripherals connected on the I2C bus. It uses Moo, a scaled down version of Moose without any data checks to improve speed.
+* This module provides a simplified object oriented interface to the libi2c-dev library for accessing electronic peripherals connected on the I2C bus. It uses Moose.
 
 = see ALSO
 
-* [Moo]
+* [Moose]
 * [IO::File]
 * [Fcntl]
 

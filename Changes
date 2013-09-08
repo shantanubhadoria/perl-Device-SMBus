@@ -16,3 +16,6 @@ Revision history for Perl extension Device::SMBus.
 
 0.05 
   - Added rest of SMBus routines to the XS File
+
+0.06
+  - Switched to Moose
