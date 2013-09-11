@@ -1,21 +1,24 @@
 Revision history for Perl extension Device::SMBus.
 
-0.01  Sat Sep  7 13:18:47 2013
-	- original version; created by h2xs 1.23 with options
-		-xA -b 5.10.0 -li2c-dev -n Device::SMBus linux/i2c-dev.h
+0.07
+  - nBytes
 
-0.02 Sun Sept   8 3:15:11 2013
-  - Added Basic Functions to SMBus Interface
+0.06
+  - Switched to Moose
 
-0.03 Sun Sept   8 3:35:18 2013
-  - Added Basic Functions to SMBus Interface
+0.05 
+  - Added rest of SMBus routines to the XS File
 
 0.04 
   - Fixed a bug in writeByteData 
   - Fixed issues due to use of Mo(no lazy and build). Switched to Moo. 
 
-0.05 
-  - Added rest of SMBus routines to the XS File
+0.03 Sun Sept   8 3:35:18 2013
+  - Added Basic Functions to SMBus Interface
 
-0.06
-  - Switched to Moose
+0.02 Sun Sept   8 3:15:11 2013
+  - Added Basic Functions to SMBus Interface
+
+0.01  Sat Sep  7 13:18:47 2013
+	- original version; created by h2xs 1.23 with options
+		-xA -b 5.10.0 -li2c-dev -n Device::SMBus linux/i2c-dev.h

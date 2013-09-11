@@ -131,6 +131,23 @@ sub writeByteData {
     my $retval = Device::SMBus::_writeByteData($self->I2CBusFilenumber,$register_address,$value);
 }
 
+=method readNBytes
+
+$self->readNBytes($lowest_byte_address, $number_of_bytes);
+
+Read together N bytes of Data in linear register order. i.e. to read from 0x28,0x29,0x2a 
+
+$self->readNBytes(0x28,3);
+
+=cut
+
+sub readNBytes {
+    my ($self,$reg,$numBytes) = @_;
+    my $retval = 0;
+    $retval = ($retval << 8) | $self->readByteData($reg+$numBytes - $_) for (1 .. $numBytes);
+    return $retval;
+}
+
 =method readWordData
 
 $self->readWordData($register_address)
