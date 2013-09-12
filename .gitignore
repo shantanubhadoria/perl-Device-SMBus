@@ -11,15 +11,9 @@ Makefile.old
 MANIFEST.bak
 MYMETA.yml
 META.json
-<<<<<<< HEAD
 META.yml
 nytprof.out
 pm_to_blib
-README.pod
-=======
-nytprof.out
-pm_to_blib
->>>>>>> 840c7e4b7087083b7f9a951c2cee4d3e498deb3d
 Device-SMBus-*
 perltidy.LOG
 *.swp
