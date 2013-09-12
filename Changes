@@ -1,6 +1,20 @@
 Changelog for Device-SMBus
 
-0.08 2013-09-12T09:26:59
+0.09 2013-09-12T09:29:09
+ - Merge branch 'master' of github.com:shantanubhadoria/Device-SMBus
+   [Shantanu]
+ - Merge pull request #1 from neilbowers/master
+   
+   Reformatted Changes files as per CPAN::Changes::Spec [Shantanu Bhadoria]
+
+0.08 2013-09-12T09:27:16
+ - v0.08
+   
+    - Merge pull request #1 from neilbowers/master
+   
+      Reformatted Changes files as per CPAN::Changes::Spec [Shantanu
+   Bhadoria]
+    - Reformatted as per CPAN::Changes::Spec [Neil Bowers] [Shantanu]
  - Merge pull request #1 from neilbowers/master
    
    Reformatted Changes files as per CPAN::Changes::Spec [Shantanu Bhadoria]
