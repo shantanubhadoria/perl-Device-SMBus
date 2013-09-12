@@ -6,7 +6,7 @@ Device::SMBus - Perl interface for smbus using libi2c-dev library.
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 
@@ -136,7 +136,15 @@ Shantanu Bhadoria <shantanu at cpan dott org>
 
 =item *
 
+Neil Bowers <neil@bowers.com>
+
+=item *
+
 Shantanu <shantanu@cpan.org>
+
+=item *
+
+Shantanu Bhadoria <shantanu.bhadoria@gmail.com>
 
 =item *
 

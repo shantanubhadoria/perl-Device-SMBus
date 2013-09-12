@@ -1,25 +1,60 @@
-Revision history for Perl module Device::SMBus
+Changelog for Device-SMBus
 
-0.07 2013-09-11
-  - nBytes
+0.08 2013-09-12T09:26:59
+ - Merge pull request #1 from neilbowers/master
+   
+   Reformatted Changes files as per CPAN::Changes::Spec [Shantanu Bhadoria]
+ - Reformatted as per CPAN::Changes::Spec [Neil Bowers]
 
-0.06 2013-09-08
-  - Switched to Moose
+0.07 2013-09-11T07:25:07
+ - N Bytes [Shantanu]
+ - N Byte [Shantanu Bhadoria]
 
-0.05 2013-09-08
-    - Added rest of SMBus routines to the XS File
+0.06 2013-09-08T10:35:28
+ - Switch from Moo to Moose to simplify my code [Shantanu Bhadoria]
 
-0.04 2013-09-08
-    - Fixed a bug in writeByteData 
-    - Fixed issues due to use of Mo(no lazy and build). Switched to Moo. 
+0.05 2013-09-08T10:19:53
+ - Added a few more easy compatibly functions [Shantanu Bhadoria]
+ - Added remaining XS routines to the XS file [Shantanu Bhadoria]
 
-0.03 2013-09-07
-    - Added Basic Functions to SMBus Interface
+0.04 2013-09-08T07:39:57
+ - Final Check on  byteData methods [Shantanu Bhadoria]
+ - Merge branch 'master' of github.com:shantanubhadoria/Device-SMBus
+   
+   Conflicts:
+	   Changes
+	   lib/Device/SMBus.pm [Shantanu Bhadoria]
+ - Merge branch 'master' of github.com:shantanubhadoria/Device-SMBus
+   
+   Conflicts:
+	   .gitignore
+	   Changes
+	   SMBus.xs
+	   dist.ini
+	   lib/Device/SMBus.pm [Shantanu Bhadoria]
+ - Merge branch 'master' of github.com:shantanubhadoria/Device-SMBus
+   
+   Conflicts:
+	   .gitignore
+	   Changes
+	   SMBus.xs
+	   dist.ini
+	   lib/Device/SMBus.pm [Shantanu Bhadoria]
 
-0.02 2013-09-07
-    - Added Basic Functions to SMBus Interface
+0.03 2013-09-07T19:36:13
+ - Merge branch 'master' of github.com:shantanubhadoria/Device-SMBus
+   
+   Conflicts:
+	   .gitignore
+	   Changes
+	   SMBus.xs
+	   dist.ini
+	   lib/Device/SMBus.pm [Shantanu Bhadoria]
+ - First Release with bare minumum function [Shantanu Bhadoria]
 
-0.01 2013-09-07
-    - original version; created by h2xs 1.23 with options
-        -xA -b 5.10.0 -li2c-dev -n Device::SMBus linux/i2c-dev.h
+0.02 2013-09-07T19:29:21
+ - First Release with bare minumum function [Shantanu Bhadoria]
+
+0.01 2013-09-07T16:58:33
+ - First Release with bare minumum function [Shantanu Bhadoria]
 
