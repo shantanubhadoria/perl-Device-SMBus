@@ -19,6 +19,10 @@ use Fcntl;
 require XSLoader;
 XSLoader::load('Device::SMBus', $VERSION);
 
+=constant I2C_SLAVE
+
+=cut
+
 use constant I2C_SLAVE => 0x0703;
 
 =attr I2CBusDevicePath
@@ -74,6 +78,17 @@ sub _build_I2CBusFileHandle {
 sub _build_I2CBusFilenumber {
     my ($self) = @_;
     $self->I2CBusFileHandle->fileno();
+}
+
+=method fileError
+
+returns IO::Handle->error() for the device handle since the last clearerr
+
+=cut
+
+sub fileError {
+    my ($self) = @_;
+    return $self->I2CBusFileHandle->error();
 }
 
 =method writeQuick
@@ -182,6 +197,11 @@ sub processCall {
 }
 
 # Preloaded methods go here.
+=method DEMOLISH
+
+Destructor
+
+=cut
 
 sub DEMOLISH {
     my ($self) = @_;
