@@ -1,6 +1,17 @@
 Changelog for Device-SMBus
 
-0.09 2013-09-12T09:29:09
+0.10 2013-09-27T12:23:20
+ - File Error catching logic [Shantanu]
+
+0.09 2013-09-12T09:29:26
+ - v0.09
+   
+    - Merge branch 'master' of github.com:shantanubhadoria/Device-SMBus
+      [Shantanu]
+    - Merge pull request #1 from neilbowers/master
+   
+      Reformatted Changes files as per CPAN::Changes::Spec [Shantanu
+   Bhadoria] [Shantanu]
  - Merge branch 'master' of github.com:shantanubhadoria/Device-SMBus
    [Shantanu]
  - Merge pull request #1 from neilbowers/master
