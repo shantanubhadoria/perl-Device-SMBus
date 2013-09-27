@@ -1,6 +1,16 @@
 Changelog for Device-SMBus
 
-0.10 2013-09-27T12:23:20
+0.11 2013-09-27T12:24:24
+ - Merge branch 'master' of github.com:shantanubhadoria/Device-SMBus
+   [Shantanu]
+ - Merge branch 'master' of github.com:shantanubhadoria/Device-SMBus
+   [Shantanu Bhadoria]
+ - minor changes [Shantanu Bhadoria]
+
+0.10 2013-09-27T12:23:43
+ - v0.10
+   
+    - File Error catching logic [Shantanu] [Shantanu]
  - File Error catching logic [Shantanu]
 
 0.09 2013-09-12T09:29:26
