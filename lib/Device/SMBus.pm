@@ -7,9 +7,9 @@ package Device::SMBus;
 # COPYRIGHT
 # VERSION
 
+# Dependencies
 use 5.010000;
 
-# Dependencies
 use Moose;
 use Carp;
 
