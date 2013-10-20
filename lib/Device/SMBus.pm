@@ -74,7 +74,7 @@ sub _build_I2CBusFileHandle {
     return $fh;
 }
 
-# Implicitly Call the lazy builder for the file handle by using it and get the fileno
+# Implicitly Call the lazy builder for the file handle by using it and get the filenumber
 sub _build_I2CBusFilenumber {
     my ($self) = @_;
     $self->I2CBusFileHandle->fileno();
