@@ -1,5 +1,20 @@
 Changelog for Device-SMBus
 
+1.03 2013-10-20T01:48:13
+ - Merge branch 'master' of github.com:shantanubhadoria/Device-SMBus
+   [Shantanu]
+ - Added more documentation [Shantanu]
+
+1.02 2013-10-16T05:13:47
+ - v1.02
+   
+    - Fixed Changes File to meet spec [Shantanu Bhadoria] [Shantanu
+   Bhadoria]
+ - Fixed Changes File to meet spec [Shantanu Bhadoria]
+
+1.01 2013-10-06T03:20:16
+ - v1.01 [Shantanu]
+
 1.00 2013-09-27T12:24:47
  - v0.11
    
