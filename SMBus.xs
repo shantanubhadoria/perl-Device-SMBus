@@ -4,7 +4,7 @@
 
 #include "ppport.h"
 
-#include<linux/i2c-dev.h>
+#include "i2c-dev.h"
 
 
 MODULE = Device::SMBus		PACKAGE = Device::SMBus PREFIX = SMBus_
