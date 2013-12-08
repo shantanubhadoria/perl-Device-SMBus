@@ -231,6 +231,11 @@ Prerequisites:
 
 * sudo apt-get install libi2c-dev i2c-tools build-essential
 
+If you are using Angstrom Linux use the following:
+
+* opkg install i2c-tools
+* opkg install i2c-tools-dev
+
 Enabling the I2C on a Raspberry Pi:
 
 You will need to comment out the driver from the blacklist. currently the
