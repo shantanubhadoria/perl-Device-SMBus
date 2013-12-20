@@ -196,6 +196,28 @@ sub processCall {
     my $retval = Device::SMBus::_processCall($self->I2CBusFilenumber,$register_address,$value);
 }
 
+=method writeBlockData
+
+$self->writeBlockData($register_address, $values)
+
+Writes a maximum of 32 bytes in a single block to the i2c device.  The supplied $values should be
+an array ref containing the bytes to be written.
+
+The register address should be one that is at the beginning of a contiguous block of registers of equal lengh
+to the array of values passed.  Not adhering to this will almost certainly result in unexpected behaviour in
+the device.
+
+=cut
+
+sub writeBlockData {
+    my ( $self, $register_address, $values ) = @_;
+    
+    my $value  = pack "C*", @{$values};
+
+    my $retval = Device::SMBus::_writeI2CBlockData($self->I2CBusFilenumber,$register_address, $value);
+    return $retval;
+}
+
 # Preloaded methods go here.
 =method DEMOLISH
 
