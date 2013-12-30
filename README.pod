@@ -23,29 +23,21 @@ This is a perl interface to smbus interface using libi2c-dev library.
 
 Prerequisites:
 
-=over
+For Debian and derivative distros(including raspbian) use the following to install dependencies:
 
-=item *
-
-sudo apt-get install libi2c-dev i2c-tools build-essential
-
-=back
+  sudo apt-get install libi2c-dev i2c-tools build-essential
 
 If you are using Angstrom Linux use the following:
 
-=over
+  opkg install i2c-tools
+  opkg install i2c-tools-dev
 
-=item *
+For ArchLINUX use the following steps:
 
-opkg install i2c-tools
+  pacman -S base-devel
+  pacman -S i2c-tools
 
-=item *
-
-opkg install i2c-tools-dev
-
-=back
-
-Enabling the I2C on a Raspberry Pi:
+Special Instructions for enabling the I2C driver on a Raspberry Pi:
 
 You will need to comment out the driver from the blacklist. currently the
 I2C driver isn't being loaded.
@@ -73,6 +65,10 @@ Now run this command(replace 1 with 0 for older model Pi)
 
      sudo i2cdetect -y 1
 
+If that doesnt work on your system you may alternatively use this:
+
+     sudo i2cdetect -r 1
+
 you should now see the addresses of the i2c devices connected to your i2c bus
 
 =head1 ATTRIBUTES
@@ -99,50 +95,82 @@ returns IO::Handle->error() for the device handle since the last clearerr
 
 =head2 writeQuick
 
-$self->writeQuick($value)
+ $self->writeQuick($value)
+
+This sends a single bit to the device, at the place of the Rd/Wr bit.
 
 =head2 readByte
 
-$self->readByte()
+ $self->readByte()
+
+This reads a single byte from a device, without specifying a device
+register. Some devices are so simple that this interface is enough; for
+others, it is a shorthand if you want to read the same register as in
+the previous SMBus command
 
 =head2 writeByte
 
-$self->writeByte()
+ $self->writeByte()
+
+This operation is the reverse of readByte: it sends a single byte
+to a device. 
 
 =head2 readByteData
 
-$self->readByteData($register_address)
+ $self->readByteData($register_address)
+
+This reads a single byte from a device, from a designated register.
+The register is specified through the Comm byte.
 
 =head2 writeByteData
 
-$self->writeByteData($register_address,$value)
+ $self->writeByteData($register_address,$value)
+
+This writes a single byte to a device, to a designated register. The
+register is specified through the Comm byte. This is the opposite of
+the Read Byte operation.
 
 =head2 readNBytes
 
-$self->readNBytes($lowest_byte_address, $number_of_bytes);
+ $self->readNBytes($lowest_byte_address, $number_of_bytes);
 
 Read together N bytes of Data in linear register order. i.e. to read from 0x28,0x29,0x2a 
 
-$self->readNBytes(0x28,3);
+ $self->readNBytes(0x28,3);
 
 =head2 readWordData
 
-$self->readWordData($register_address)
+ $self->readWordData($register_address)
+
+This operation is very like Read Byte; again, data is read from a
+device, from a designated register that is specified through the Comm
+byte. But this time, the data is a complete word (16 bits).
 
 =head2 writeWordData
 
-$self->writeWordData($register_address,$value)
+ $self->writeWordData($register_address,$value)
+
+This is the opposite of the Read Word operation. 16 bits
+of data is written to a device, to the designated register that is
+specified through the Comm byte.
 
 =head2 processCall
 
-$self->processCall($register_address,$value)
+ $self->processCall($register_address,$value)
+
+This command selects a device register (through the Comm byte), sends
+16 bits of data to it, and reads 16 bits of data in return.
 
 =head2 writeBlockData
 
-$self->writeBlockData($register_address, $values)
+ $self->writeBlockData($register_address, $values)
 
 Writes a maximum of 32 bytes in a single block to the i2c device.  The supplied $values should be
 an array ref containing the bytes to be written.
+
+The register address should be one that is at the beginning of a contiguous block of registers of equal length
+to the array of values passed.  Not adhering to this will almost certainly result in unexpected behaviour in
+the device.
 
 =head2 DEMOLISH
 
@@ -162,7 +190,7 @@ This module provides a simplified object oriented interface to the libi2c-dev li
 
 =back
 
-=head1 see ALSO
+=head1 SEE ALSO
 
 =over
 
@@ -209,23 +237,15 @@ Shantanu Bhadoria <shantanu at cpan dott org>
 
 =item *
 
+Jonathan Stowe <jns+git@gellyfish.co.uk>
+
+=item *
+
 Neil Bowers <neil@bowers.com>
 
 =item *
 
-Shantanu <shantanu@cpan.org>
-
-=item *
-
-Shantanu Bhadoria <shantanu.bhadoria@gmail.com>
-
-=item *
-
-Shantanu Bhadoria <shantanu@cpan.org>
-
-=item *
-
-root <root@beaglebone.(none)>
+Shantanu Bhadoria <shantanu att cpan dott org>
 
 =back
 
@@ -236,4 +256,3 @@ This software is copyright (c) 2013 by Shantanu Bhadoria.
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
-=cut
