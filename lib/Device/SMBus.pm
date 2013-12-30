@@ -93,7 +93,9 @@ sub fileError {
 
 =method writeQuick
 
-$self->writeQuick($value)
+ $self->writeQuick($value)
+
+This sends a single bit to the device, at the place of the Rd/Wr bit.
 
 =cut
 
@@ -104,7 +106,12 @@ sub writeQuick {
 
 =method readByte
 
-$self->readByte()
+ $self->readByte()
+
+This reads a single byte from a device, without specifying a device
+register. Some devices are so simple that this interface is enough; for
+others, it is a shorthand if you want to read the same register as in
+the previous SMBus command
 
 =cut
 
@@ -115,7 +122,10 @@ sub readByte {
 
 =method writeByte
 
-$self->writeByte()
+ $self->writeByte()
+
+This operation is the reverse of readByte: it sends a single byte
+to a device. 
 
 =cut
 
@@ -126,7 +136,10 @@ sub writeByte {
 
 =method readByteData
 
-$self->readByteData($register_address)
+ $self->readByteData($register_address)
+
+This reads a single byte from a device, from a designated register.
+The register is specified through the Comm byte.
 
 =cut
 
@@ -137,7 +150,11 @@ sub readByteData {
 
 =method writeByteData
 
-$self->writeByteData($register_address,$value)
+ $self->writeByteData($register_address,$value)
+
+This writes a single byte to a device, to a designated register. The
+register is specified through the Comm byte. This is the opposite of
+the Read Byte operation.
 
 =cut
 
@@ -148,11 +165,11 @@ sub writeByteData {
 
 =method readNBytes
 
-$self->readNBytes($lowest_byte_address, $number_of_bytes);
+ $self->readNBytes($lowest_byte_address, $number_of_bytes);
 
 Read together N bytes of Data in linear register order. i.e. to read from 0x28,0x29,0x2a 
 
-$self->readNBytes(0x28,3);
+ $self->readNBytes(0x28,3);
 
 =cut
 
@@ -165,7 +182,11 @@ sub readNBytes {
 
 =method readWordData
 
-$self->readWordData($register_address)
+ $self->readWordData($register_address)
+
+This operation is very like Read Byte; again, data is read from a
+device, from a designated register that is specified through the Comm
+byte. But this time, the data is a complete word (16 bits).
 
 =cut
 
@@ -176,7 +197,11 @@ sub readWordData {
 
 =method writeWordData
 
-$self->writeWordData($register_address,$value)
+ $self->writeWordData($register_address,$value)
+
+This is the opposite of the Read Word operation. 16 bits
+of data is written to a device, to the designated register that is
+specified through the Comm byte.
 
 =cut
 
@@ -187,7 +212,10 @@ sub writeWordData {
 
 =method processCall
 
-$self->processCall($register_address,$value)
+ $self->processCall($register_address,$value)
+
+This command selects a device register (through the Comm byte), sends
+16 bits of data to it, and reads 16 bits of data in return.
 
 =cut
 
@@ -198,7 +226,7 @@ sub processCall {
 
 =method writeBlockData
 
-$self->writeBlockData($register_address, $values)
+ $self->writeBlockData($register_address, $values)
 
 Writes a maximum of 32 bytes in a single block to the i2c device.  The supplied $values should be
 an array ref containing the bytes to be written.
@@ -251,14 +279,21 @@ This is a perl interface to smbus interface using libi2c-dev library.
 
 Prerequisites:
 
-* sudo apt-get install libi2c-dev i2c-tools build-essential
+For Debian and derivative distros(including raspbian) use the following to install dependencies:
+
+ sudo apt-get install libi2c-dev i2c-tools build-essential
 
 If you are using Angstrom Linux use the following:
 
-* opkg install i2c-tools
-* opkg install i2c-tools-dev
+ opkg install i2c-tools
+ opkg install i2c-tools-dev
 
-Enabling the I2C on a Raspberry Pi:
+For ArchLINUX use the following steps:
+
+ pacman -S base-devel
+ pacman -S i2c-tools
+
+Special Instructions for enabling the I2C driver on a Raspberry Pi:
 
 You will need to comment out the driver from the blacklist. currently the
 I2C driver isn't being loaded.
@@ -286,13 +321,17 @@ Now run this command(replace 1 with 0 for older model Pi)
 
     sudo i2cdetect -y 1
 
+If that doesnt work on your system you may alternatively use this:
+
+    sudo i2cdetect -r 1
+
 you should now see the addresses of the i2c devices connected to your i2c bus
 
 = USAGE
 
 * This module provides a simplified object oriented interface to the libi2c-dev library for accessing electronic peripherals connected on the I2C bus. It uses Moose.
 
-= see ALSO
+= SEE ALSO
 
 * [Moose]
 * [IO::File]
