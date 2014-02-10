@@ -118,6 +118,7 @@ the previous SMBus command
 sub readByte {
     my ($self) = @_;
     my $retval = Device::SMBus::_readByte($self->I2CBusFilenumber);
+    return $retval;
 }
 
 =method writeByte
@@ -146,6 +147,7 @@ The register is specified through the Comm byte.
 sub readByteData {
     my ($self,$register_address) = @_;
     my $retval = Device::SMBus::_readByteData($self->I2CBusFilenumber,$register_address);
+    return $retval;
 }
 
 =method writeByteData
@@ -193,6 +195,7 @@ byte. But this time, the data is a complete word (16 bits).
 sub readWordData {
     my ($self,$register_address) = @_;
     my $retval = Device::SMBus::_readWordData($self->I2CBusFilenumber,$register_address);
+    return $retval;
 }
 
 =method writeWordData
