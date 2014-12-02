@@ -260,10 +260,10 @@ data is returned as array
 
 The register address is often 0x00 or the value your device expects
 
-common usage with microcontrollers that receive and send large amounts of data:
-they almoust always needs a 'command' to be written to them then they send a respnse:
+common usage with micro controllers that receive and send large amounts of data:
+they almost always needs a 'command' to be written to them then they send a response:
 e.g:
-1) send 'command' with writeblockdata, or writeByteData, for examle 'get last telegram'
+1) send 'command' with writeBlockData, or writeByteData, for example 'get last telegram'
 2) read 'response' with readBlockData of size $numBytes, controller is sending the last telegram
 
 
