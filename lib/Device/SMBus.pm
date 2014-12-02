@@ -249,6 +249,41 @@ sub writeBlockData {
     return $retval;
 }
 
+
+=method readBlockData
+
+ $self->readBlockData($register_address, $numBytes)
+
+
+Read $numBytes form the given register address,
+data is returned as array
+
+The register address is often 0x00 or the value your device expects
+
+common usage with microcontrollers that receive and send large amounts of data:
+they almoust always needs a 'command' to be written to them then they send a respnse:
+e.g:
+1) send 'command' with writeblockdata, or writeByteData, for examle 'get last telegram'
+2) read 'response' with readBlockData of size $numBytes, controller is sending the last telegram
+
+
+=cut
+
+
+sub readBlockData {
+    my ( $self, $register_address, $numBytes) = @_;
+
+    my $read_val = '0' x ($numBytes);
+
+    my $retval = Device::SMBus::_readI2CBlockData( $self->I2CBusFilenumber,
+        $register_address, $read_val );
+
+    my @result = unpack("C*", $read_val);
+    return @result;
+}
+
+
+
 # Preloaded methods go here.
 =method DEMOLISH
 
