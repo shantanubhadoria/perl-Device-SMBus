@@ -1,6 +1,9 @@
 Changelog for Device-SMBus
 
-1.07 2014-12-02T09:30:11
+1.08 2014-12-08T03:12:11
+ - Modified POD documentation, added notes (Shantanu Bhadoria)
+
+1.07 2014-12-02T09:30:11Z
  - Fixed Spelling Errors, Added new words to stopwords (Shantanu Bhadoria)
  - addding Changes (Shantanu Bhadoria)
  - Removed Changes from git repo to avoid dzil release issues (Shantanu
