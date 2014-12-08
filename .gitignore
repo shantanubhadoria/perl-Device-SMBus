@@ -1,4 +1,5 @@
 blib/
+debuild/
 .build/
 _build/
 cover_db/

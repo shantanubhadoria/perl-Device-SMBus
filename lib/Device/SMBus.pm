@@ -3,7 +3,7 @@ use warnings;
 package Device::SMBus;
 
 # PODNAME: Device::SMBus 
-# ABSTRACT: Perl interface for smbus using libi2c-dev library.  
+# ABSTRACT: Control and read hardware devices with i2c(SMBus)
 # COPYRIGHT
 # VERSION
 
@@ -364,6 +364,14 @@ If that doesnt work on your system you may alternatively use this:
     sudo i2cdetect -r 1
 
 you should now see the addresses of the i2c devices connected to your i2c bus
+
+= NOTES
+
+I wrote this library for my Quadrotor project for controlling PWM Wave Generators ( ESC or DC motor controller ), Accelerometer, Gyroscope, Magnetometer, Altimeter, Temperature Sensor etc. However this module can also be used by anyone who wishes to read or control motherboard devices on I2C like laptop battery system, temperature or voltage sensors, fan controllers, lid switches, clock chips. Some PCI add in cards may connect to a SMBus segment.
+
+The SMBus was defined by Intel in 1995. It carries clock, data, and instructions and is based on Philips' I2C serial bus protocol. Its clock frequency range is 10 kHz to 100 kHz. (PMBus extends this to 400 kHz.) Its voltage levels and timings are more strictly defined than those of I2C, but devices belonging to the two systems are often successfully mixed on the same bus. SMBus is used as an interconnect in several platform management standards including: ASF, DASH, IPMI. 
+
+-wiki
 
 = USAGE
 
