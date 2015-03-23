@@ -1,6 +1,9 @@
 Changelog for Device-SMBus
 
-1.08 2014-12-08T03:12:11
+1.09 2015-03-23T06:43:51
+ - dist.ini changes, added author website (Shantanu Bhadoria)
+
+1.08 2014-12-08T03:12:11Z
  - Modified POD documentation, added notes (Shantanu Bhadoria)
 
 1.07 2014-12-02T09:30:11Z

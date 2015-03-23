@@ -6,7 +6,7 @@ Device::SMBus - Control and read hardware devices with i2c(SMBus)
 
 =head1 VERSION
 
-version 1.08
+version 1.09
 
 =head1 SYNOPSIS
 
@@ -238,7 +238,7 @@ L<Fcntl>
 =head2 Bugs / Feature Requests
 
 Please report any bugs or feature requests through github at 
-L<https://github.com/shantanubhadoria/device-smbus/issues>.
+L<https://github.com/shantanubhadoria/perl-device-smbus/issues>.
 You will be notified automatically of any progress on your issue.
 
 =head2 Source Code
@@ -246,13 +246,13 @@ You will be notified automatically of any progress on your issue.
 This is open source software.  The code repository is available for
 public review and contribution under the terms of the license.
 
-L<https://github.com/shantanubhadoria/device-smbus>
+L<https://github.com/shantanubhadoria/perl-device-smbus>
 
-  git clone git://github.com/shantanubhadoria/device-smbus.git
+  git clone git://github.com/shantanubhadoria/perl-device-smbus.git
 
 =head1 AUTHOR
 
-Shantanu Bhadoria <shantanu at cpan dott org>
+Shantanu Bhadoria <shantanu@cpan.org> L<https://www.shantanubhadoria.com>
 
 =head1 CONTRIBUTORS
 
@@ -280,7 +280,7 @@ wfreller <wolfgang@freller.at>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Shantanu Bhadoria.
+This software is copyright (c) 2015 by Shantanu Bhadoria.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
