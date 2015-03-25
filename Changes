@@ -1,6 +1,10 @@
 Changelog for Device-SMBus
 
-1.10 2015-03-25T06:51:34
+1.11 2015-03-25T06:53:48
+ - Adding manual for writing i2c device drivers using Device::SMBus
+   (Shantanu Bhadoria)
+
+1.10 2015-03-25T06:51:34Z
  - Adding manual for writing i2c device drivers using Device::SMBus
    (Shantanu Bhadoria)
 
