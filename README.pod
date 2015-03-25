@@ -6,7 +6,7 @@ Device::SMBus - Control and read hardware devices with i2c(SMBus)
 
 =head1 VERSION
 
-version 1.09
+version 1.10
 
 =head1 SYNOPSIS
 
@@ -194,6 +194,10 @@ Destructor
 =head1 CONSTANTS
 
 =head2 I2C_SLAVE
+
+=head1 CREATING YOUR OWN CHIPSET DRIVERS
+
+Writing your own chipset driver for your own i2c devices is quiet simple. You just need to know the i2c address of your device and the registers that you need to read or write. Follow the manual at L<Device::SMBus::Manual>.
 
 =head1 NOTES
 
