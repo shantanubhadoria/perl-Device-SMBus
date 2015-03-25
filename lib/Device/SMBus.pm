@@ -365,6 +365,10 @@ If that doesnt work on your system you may alternatively use this:
 
 you should now see the addresses of the i2c devices connected to your i2c bus
 
+= CREATING YOUR OWN CHIPSET DRIVERS
+
+Writing your own chipset driver for your own i2c devices is quiet simple. You just need to know the i2c address of your device and the registers that you need to read or write. Follow the manual at [Device::SMBus::Manual].
+
 = NOTES
 
 I wrote this library for my Quadrotor project for controlling PWM Wave Generators ( ESC or DC motor controller ), Accelerometer, Gyroscope, Magnetometer, Altimeter, Temperature Sensor etc. However this module can also be used by anyone who wishes to read or control motherboard devices on I2C like laptop battery system, temperature or voltage sensors, fan controllers, lid switches, clock chips. Some PCI add in cards may connect to a SMBus segment.
