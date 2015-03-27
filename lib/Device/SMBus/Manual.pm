@@ -4,7 +4,7 @@ use warnings;
 package Device::SMBus::Manual;
 
 # PODNAME: Device::SMBus::Manual
-# ABSTRACT: Manual for writing device drivers using Device::SMBus
+# ABSTRACT: Manual for writing device drivers using L<Device::SMBus>
 # COPYRIGHT
 # VERSION
 
