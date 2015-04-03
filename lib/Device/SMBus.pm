@@ -10,7 +10,7 @@ package Device::SMBus;
 # Dependencies
 use 5.010000;
 
-use Moose;
+use Moo;
 use Carp;
 
 use IO::File;
@@ -379,11 +379,11 @@ The SMBus was defined by Intel in 1995. It carries clock, data, and instructions
 
 = USAGE
 
-* This module provides a simplified object oriented interface to the libi2c-dev library for accessing electronic peripherals connected on the I2C bus. It uses Moose.
+* This module provides a simplified object oriented interface to the libi2c-dev library for accessing electronic peripherals connected on the I2C bus. It uses Moo.
 
 = SEE ALSO
 
-* [Moose]
+* [Moo]
 * [IO::File]
 * [Fcntl]
 

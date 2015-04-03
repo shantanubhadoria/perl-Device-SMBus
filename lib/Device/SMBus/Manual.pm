@@ -89,7 +89,7 @@ Lets start by defining the package [Device::LSM303DLHC]. This is a small package
     use warnings;
     package Device::LSM303DLHC;
 
-    use Moose;
+    use Moo;
     extends 'Device::SMBus';
 
     # We will define these two modules in the next steps 
@@ -143,7 +143,7 @@ Next we will define the accelerometer module in the Device::Accelerometer namesp
 
     use POSIX;
 
-    use Moose;
+    use Moo;
     extends 'Device::SMBus';
 
     has '+I2CDeviceAddress' => (
@@ -288,7 +288,7 @@ We can now write the second module to read magnetometer data.
 
     use POSIX;
 
-    use Moose;
+    use Moo;
     extends 'Device::SMBus';
 
     has '+I2CDeviceAddress' => (
