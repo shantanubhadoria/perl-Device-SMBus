@@ -293,7 +293,7 @@ Destructor
 
 sub DEMOLISH {
     my ($self) = @_;
-    $self->I2CBusFileHandle->close();
+    $self->I2CBusFileHandle->close() if defined($self->I2CBusFileHandle);
 }
 
 1;
