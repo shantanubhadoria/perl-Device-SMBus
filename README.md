@@ -2,9 +2,19 @@
 
 Device::SMBus - Control and read hardware devices with i2c(SMBus)
 
+<div>
+    <p>
+    <img src="https://img.shields.io/badge/perl-5.10+-brightgreen.svg" alt="Requires Perl 5.10+" />
+    <a href="https://travis-ci.org/shantanubhadoria/perl-Device-SMBus"><img src="https://api.travis-ci.org/shantanubhadoria/perl-Device-SMBus.svg?branch=build/master" alt="Travis status" /></a>
+    <a href="http://matrix.cpantesters.org/?dist=Device-SMBus%201.14"><img src="https://badgedepot.code301.com/badge/cpantesters/Device-SMBus/1.14" alt="CPAN Testers result" /></a>
+    <a href="http://cpants.cpanauthors.org/dist/Device-SMBus-1.14"><img src="https://badgedepot.code301.com/badge/kwalitee/Device-SMBus/1.14" alt="Distribution kwalitee" /></a>
+    <a href="https://gratipay.com/shantanubhadoria"><img src="https://img.shields.io/gratipay/shantanubhadoria.svg" alt="Gratipay" /></a>
+    </p>
+</div>
+
 # VERSION
 
-version 1.13
+version 1.14
 
 # SYNOPSIS
 
@@ -207,11 +217,11 @@ The SMBus was defined by Intel in 1995. It carries clock, data, and instructions
 
 # USAGE
 
-- This module provides a simplified object oriented interface to the libi2c-dev library for accessing electronic peripherals connected on the I2C bus. It uses Moose.
+- This module provides a simplified object oriented interface to the libi2c-dev library for accessing electronic peripherals connected on the I2C bus. It uses Moo.
 
 # SEE ALSO
 
-- [Moose](https://metacpan.org/pod/Moose)
+- [Moo](https://metacpan.org/pod/Moo)
 - [IO::File](https://metacpan.org/pod/IO::File)
 - [Fcntl](https://metacpan.org/pod/Fcntl)
 
@@ -238,14 +248,14 @@ Shantanu Bhadoria <shantanu@cpan.org> [https://www.shantanubhadoria.com](https:/
 
 # CONTRIBUTORS
 
-- Jonathan Stowe <jns+git@gellyfish.co.uk>
+- Jonathan Stowe &lt;jns+git@gellyfish.co.uk>
 - Neil Bowers <neil@bowers.com>
-- Shantanu Bhadoria <shantanu att cpan dott org>
+- Shantanu Bhadoria &lt;shantanu att cpan dott org>
 - wfreller <wolfgang@freller.at>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2015 by Shantanu Bhadoria.
+This software is copyright (c) 2016 by Shantanu Bhadoria.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

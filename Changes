@@ -1,6 +1,9 @@
 Changelog for Device-SMBus
 
-1.13 2015-04-03T16:10:17
+1.14 2016-04-07T05:40:57
+ - Added Travis (Shantanu Bhadoria)
+
+1.13 2015-04-03T16:10:17Z
  - Switched from Moose to Moo to speed up things (Shantanu Bhadoria)
  - Adding Markdown file (Shantanu Bhadoria)
 
@@ -101,4 +104,3 @@ Changelog for Device-SMBus
 
 0.01 2013-09-07T16:58:33Z
  - First Release with bare minumum function (Shantanu Bhadoria)
-
