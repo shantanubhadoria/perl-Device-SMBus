@@ -4,17 +4,14 @@ Device::SMBus - Control and read hardware devices with i2c(SMBus)
 
 <div>
     <p>
-    <img src="https://img.shields.io/badge/perl-5.10+-brightgreen.svg" alt="Requires Perl 5.10+" />
     <a href="https://travis-ci.org/shantanubhadoria/perl-Device-SMBus"><img src="https://api.travis-ci.org/shantanubhadoria/perl-Device-SMBus.svg?branch=build/master" alt="Travis status" /></a>
-    <a href="http://matrix.cpantesters.org/?dist=Device-SMBus%201.14"><img src="https://badgedepot.code301.com/badge/cpantesters/Device-SMBus/1.14" alt="CPAN Testers result" /></a>
-    <a href="http://cpants.cpanauthors.org/dist/Device-SMBus-1.14"><img src="https://badgedepot.code301.com/badge/kwalitee/Device-SMBus/1.14" alt="Distribution kwalitee" /></a>
     <a href="https://gratipay.com/shantanubhadoria"><img src="https://img.shields.io/gratipay/shantanubhadoria.svg" alt="Gratipay" /></a>
     </p>
 </div>
 
 # VERSION
 
-version 1.14
+version 1.15
 
 # SYNOPSIS
 
@@ -244,14 +241,15 @@ public review and contribution under the terms of the license.
 
 # AUTHOR
 
-Shantanu Bhadoria <shantanu@cpan.org> [https://www.shantanubhadoria.com](https://www.shantanubhadoria.com)
+Shantanu Bhadoria &lt;shantanu@cpan.org> [https://www.shantanubhadoria.com](https://www.shantanubhadoria.com)
 
 # CONTRIBUTORS
 
+- Joel Maslak &lt;jmaslak@antelope.net>
 - Jonathan Stowe &lt;jns+git@gellyfish.co.uk>
-- Neil Bowers <neil@bowers.com>
+- Neil Bowers &lt;neil@bowers.com>
 - Shantanu Bhadoria &lt;shantanu att cpan dott org>
-- wfreller <wolfgang@freller.at>
+- wfreller &lt;wolfgang@freller.at>
 
 # COPYRIGHT AND LICENSE
 
