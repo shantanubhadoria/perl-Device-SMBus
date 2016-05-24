@@ -13,7 +13,7 @@ package Device::SMBus;
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-our $VERSION = '1.14'; # VERSION
+our $VERSION = '1.15'; # VERSION
 
 # Dependencies
 use 5.010000;
@@ -166,7 +166,7 @@ sub readBlockData {
 
 sub DEMOLISH {
     my ($self) = @_;
-    $self->I2CBusFileHandle->close();
+    $self->I2CBusFileHandle->close() if defined( $self->I2CBusFileHandle );
 }
 
 1;
@@ -184,10 +184,7 @@ Device::SMBus - Control and read hardware devices with i2c(SMBus)
 =begin html
 
 <p>
-<img src="https://img.shields.io/badge/perl-5.10+-brightgreen.svg" alt="Requires Perl 5.10+" />
 <a href="https://travis-ci.org/shantanubhadoria/perl-Device-SMBus"><img src="https://api.travis-ci.org/shantanubhadoria/perl-Device-SMBus.svg?branch=build/master" alt="Travis status" /></a>
-<a href="http://matrix.cpantesters.org/?dist=Device-SMBus%201.14"><img src="https://badgedepot.code301.com/badge/cpantesters/Device-SMBus/1.14" alt="CPAN Testers result" /></a>
-<a href="http://cpants.cpanauthors.org/dist/Device-SMBus-1.14"><img src="https://badgedepot.code301.com/badge/kwalitee/Device-SMBus/1.14" alt="Distribution kwalitee" /></a>
 <a href="https://gratipay.com/shantanubhadoria"><img src="https://img.shields.io/gratipay/shantanubhadoria.svg" alt="Gratipay" /></a>
 </p>
 
@@ -195,7 +192,7 @@ Device::SMBus - Control and read hardware devices with i2c(SMBus)
 
 =head1 VERSION
 
-version 1.14
+version 1.15
 
 =head1 SYNOPSIS
 
@@ -449,9 +446,13 @@ Shantanu Bhadoria <shantanu@cpan.org> L<https://www.shantanubhadoria.com>
 
 =head1 CONTRIBUTORS
 
-=for stopwords Jonathan Stowe Neil Bowers Shantanu Bhadoria wfreller
+=for stopwords Joel Maslak Jonathan Stowe Neil Bowers Shantanu Bhadoria wfreller
 
 =over 4
+
+=item *
+
+Joel Maslak <jmaslak@antelope.net>
 
 =item *
 

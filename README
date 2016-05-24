@@ -4,7 +4,7 @@ NAME
 
 VERSION
 
-    version 1.14
+    version 1.15
 
 SYNOPSIS
 
@@ -264,6 +264,8 @@ AUTHOR
     Shantanu Bhadoria <shantanu@cpan.org> https://www.shantanubhadoria.com
 
 CONTRIBUTORS
+
+      * Joel Maslak <jmaslak@antelope.net>
 
       * Jonathan Stowe <jns+git@gellyfish.co.uk>
 

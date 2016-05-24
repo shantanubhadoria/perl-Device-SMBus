@@ -13,7 +13,7 @@ package Device::SMBus::Manual;
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-our $VERSION = '1.14'; # VERSION
+our $VERSION = '1.15'; # VERSION
 
 1;
 
@@ -27,7 +27,7 @@ Device::SMBus::Manual - Manual for writing device drivers using L<Device::SMBus>
 
 =head1 VERSION
 
-version 1.14
+version 1.15
 
 =head1 DESCRIPTION
 

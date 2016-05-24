@@ -79,11 +79,11 @@
    "provides" : {
       "Device::SMBus" : {
          "file" : "lib/Device/SMBus.pm",
-         "version" : "1.14"
+         "version" : "1.15"
       },
       "Device::SMBus::Manual" : {
          "file" : "lib/Device/SMBus/Manual.pm",
-         "version" : "1.14"
+         "version" : "1.15"
       }
    },
    "release_status" : "stable",
@@ -98,8 +98,9 @@
          "web" : "https://github.com/shantanubhadoria/perl-device-smbus"
       }
    },
-   "version" : "1.14",
+   "version" : "1.15",
    "x_contributors" : [
+      "Joel Maslak <jmaslak@antelope.net>",
       "Jonathan Stowe <jns+git@gellyfish.co.uk>",
       "Neil Bowers <neil@bowers.com>",
       "Shantanu Bhadoria <shantanu att cpan dott org>",
