@@ -1,6 +1,13 @@
 Changelog for Device-SMBus
 
-1.14 2016-04-07T05:49:32
+1.15 2016-05-24T08:19:55
+ - Bump Changes (Shantanu Bhadoria)
+ - Fix non-deterministic destruction issue When the destruction method
+   runs, it is possible for the file handle to already be closed (and set
+   to undef), resulting in an error message. This validates that the file
+   handle is defined before closing it. (Joel Maslak)
+
+1.14 2016-04-07T05:49:32Z
  - fixing travis (Shantanu Bhadoria)
  - Test changes (Shantanu Bhadoria)
  - Added Travis (Shantanu Bhadoria)
