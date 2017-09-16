@@ -245,7 +245,7 @@ Shantanu Bhadoria &lt;shantanu@cpan.org> [https://www.shantanubhadoria.com](http
 
 # CONTRIBUTORS
 
-- Joel Maslak &lt;jmaslak@antelope.net>
+- J. Maslak &lt;jmaslak@antelope.net>
 - Jonathan Stowe &lt;jns+git@gellyfish.co.uk>
 - Neil Bowers &lt;neil@bowers.com>
 - Shantanu Bhadoria &lt;shantanu att cpan dott org>
